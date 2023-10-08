@@ -1,34 +1,21 @@
 package seminars.second.hw;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-import seminars.second.model.Cart;
-import seminars.second.model.Product;
-import seminars.second.model.Shop;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class VehicleTest {
     private Car car;
     private Motorcycle motorcycle;
+
     @BeforeEach
     void setUp() {
         car = new Car("Dodge", "Ram", 2010);
         motorcycle = new Motorcycle("Yamaha", "R1", 2015);
     }
+
     @Test
     public void testCarIsInstanceOfVehicle() {
         assertTrue(car instanceof Vehicle);
